@@ -1,9 +1,6 @@
 package com.javarush.task.pro.task15.task1508;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.Scanner;
 
 /* 
@@ -13,8 +10,8 @@ import java.util.Scanner;
 public class Solution {
     public static void main(String[] args) {
         try (InputStream stream = System.in;
-             Scanner console = new Scanner(stream)) {
-            String line = console.nextLine();
+             BufferedReader buf = new BufferedReader(new InputStreamReader(stream))) {
+            String line = buf.readLine();
             char[] chars = line.toCharArray();
             for (int i = 0; i < chars.length; i++) {
                 if (i % 2 == 1) {
